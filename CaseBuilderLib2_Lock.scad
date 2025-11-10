@@ -39,11 +39,12 @@ module lockShape(pSet,pad=0) {
     wallW  = pSet[idxWallW];  //Wall thickness
     gapW   = pSet[idxGapW];   //Gap between moving parts
 
-    lockW  = max(20,0.5*idimX)-pad;                           //Width of the lock
-    lockZ  = -idimZ/2;                                        //Z-pos of the latch
-    lockY  = idimY/2-sqrt(pow(wallW+idimY,2)-pow(lockZ/2,2)); //Y-pos of the latch
-    iRadY  = sqrt(pow(wallW+idimY,2)+pow(idimZ/2,2))+pad;     //Radius
-      
+    lockOffs = 1;                                                        //Adjust tightness of the lock
+    lockW    = max(20,0.5*idimX)-pad;                                    //Width of the lock
+    lockZ    = -idimZ/2;                                                 //Z-pos of the latch
+    lockY    = lockOffs+idimY/2-sqrt(pow(wallW+idimY,2)-pow(lockZ/2,2)); //Y-pos of the latch
+    iRadY    = sqrt(pow(wallW+idimY,2)+pow(idimZ/2,2))+pad;              //Radius
+    
     difference() {
         //Positives
         union() {
