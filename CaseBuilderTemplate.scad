@@ -78,7 +78,7 @@ include <CaseBuilderLib2.scad>
 
 /* [View] */
 //Design stage
-Stage=2; // [1:Model, 2:Generate]
+Stage=1; // [1:Model, 2:Generate]
 
 //Opening angle
 OpenA=180; // [0:180]

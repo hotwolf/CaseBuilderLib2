@@ -1,7 +1,7 @@
 # CaseBuilderLib2
 Design 3D printed cases for random things!
 
-![Title](Examples/Gauge/howto_title.jpg) 
+![Title](Examples/Endoscope/howto_title.png) 
 
 ## How to use this library:
 
@@ -11,30 +11,28 @@ Design 3D printed cases for random things!
       The template is intended to be used with the OpenSCAD
       Customizer. 
 
-      ![Step 1.1a](Examples/Gauge/howto_step1_1a.jpg) 
+      ![Step 1.1a](Examples/Endoscope/howto_step1_1a.jpg) 
 
       The design of a customized case is done in three stages.
       Start by setting the **`Stage`** variable to **"Model"** 
       (value = 1). 
 
-      ![Step 1.1b](Examples/Gauge/howto_step1_1b.jpg)
+      ![Step 1.1b](Examples/Endoscope/howto_step1_1b.png)
 
 2. **Model Stage**
-   1. Design a model of the parts of your case content as children
-      of the **`CaseBuilder()`** module. 
-      Construct each part of the content using primitive shapes. 
-      Complex shapes will be wrapped in a hull.
-      Use exact measures. 
-      Slack will be added to the cavities automatically.
+   1. Design the cavities of the case as children
+      of the **`CaseBuilder()`** module.
+      Use the **`objectCavity()`** modifier to generate a cavity 
+      from the model of a storage item. 
 
-      ![Step 2.1](Examples/Gauge/howto_step2_1.jpg) 
+      ![Step 2.1](Examples/Endoscope/howto_step2_1.jpg) 
 
    2. Configure the inner dimansions of the case by setting the
       **`IdimX`**, **`IdimY`**, and **`IdimZ`** variables.
       If necessary, adjust the position of the content through the
       **`ObjX`**, **`ObjY`**, and **`ObjZ`** variables.
 
-      ![Step 2.2](Examples/Gauge/howto_step2_2.jpg) 
+      ![Step 2.2](Examples/Endoscope/howto_step2_2.jpg) 
 
    3. If needed, add some grip holes by setting the variables
       **`Gh1X`**, **`Gh2X`**, or **`Gh3X`** to a value within the inner 
@@ -43,7 +41,7 @@ Design 3D printed cases for random things!
       **`ghX`** array within the instantiation of the 
       **`CaseBuilder()`** module.
 
-      ![Step 2.3](Examples/Gauge/howto_step2_3.jpg) 
+      ![Step 2.3](Examples/Endoscope/howto_step2_3.jpg) 
 
    4. Select a lock option through the **`LockO`** variable.
       Options Are:
@@ -51,18 +49,18 @@ Design 3D printed cases for random things!
       * Elastic string (**`LockO`** = **1**)
       * Pull Latch  (**`LockO`** = **2**)
 
-      ![Step 2.4](Examples/Gauge/howto_step2_4.jpg) 
+      ![Step 2.4](Examples/Endoscope/howto_step2_4.jpg) 
 
    5. Add an optional label to the case by setting the string
       variable **`LabT`**. The font size can be adjusted through
       the variable **`LabS`**.
 
-      ![Step 2.5b](Examples/Gauge/howto_step2_5a.jpg) 
+      ![Step 2.5b](Examples/Endoscope/howto_step2_5a.jpg) 
 
       Continue by setting the **`Stage`** variable to **"Check"** 
       (value = 2). 
 
-      ![Step 2.5b](Examples/Gauge/howto_step2_5b.jpg) 
+      ![Step 2.5b](Examples/Endoscope/howto_step2_5b.jpg) 
 
 3. **Check Stage**
    1. Review the design. 
@@ -75,25 +73,25 @@ Design 3D printed cases for random things!
       The lower part of the case can be eclipsed through the 
       **LvisB** variable.
 
-      ![Step 3.1a](Examples/Gauge/howto_step3_1a.jpg) 
+      ![Step 3.1a](Examples/Endoscope/howto_step3_1a.jpg) 
 
        Continue by setting the **Stage** variable to **"Generate"** 
       (value = 3). 
       
-      ![Step 3.1b](Examples/Gauge/howto_step3_1b.jpg) 
+      ![Step 3.1b](Examples/Endoscope/howto_step3_1b.jpg) 
 
 4. **Generate stage**
    1. Do a final review of the design.
       Use the **OpenA**, **UvisB**, and **LvisB** variables for a
       detailed inspection.
 
-      ![Step 4.1](Examples/Gauge/howto_step4_1.jpg) 
+      ![Step 4.1](Examples/Endoscope/howto_step4_1.jpg) 
 
-   2. Render the design and generate a [STL file](https://github.com/hotwolf/CaseBuilderLib/blob/master/Examples/Gauge/Gauge.stl).
+   2. Render the design and generate a [STL file](https://github.com/hotwolf/CaseBuilderLib/blob/master/Examples/Endoscope/Endoscope.stl).
 
-      ![Step 4.2](Examples/Gauge/howto_step4_2.jpg) 
+      ![Step 4.2](Examples/Endoscope/howto_step4_2.jpg) 
 
    3. Slice and print.
 
-      ![Step 4.3](Examples/Gauge/howto_step4_3.jpg)
+      ![Step 4.3](Examples/Endoscope/howto_step4_3.jpg)
 
